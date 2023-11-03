@@ -21,7 +21,7 @@ namespace InvoiceManagement
             InitializeComponent();
         }
         //MEINE CONN DATEN!!!
-        //_connection = new NpgsqlConnection("Server=192.168.1.236;Port=5432;Database=ausbildung;User Id=nicetec;Password=nicetec;");
+        //_connection = new NpgsqlConnection("Server=;Port=;Database=;User Id=;Password=;");
 
         private void RetriveDataKunden_Click(object sender, EventArgs e)
         {
@@ -112,11 +112,11 @@ namespace InvoiceManagement
 
         private string GetConnectionString()
         {
-            string server = "192.168.1.236";
-            string port = "5432";
-            string database = "ausbildung";
-            string user = "nicetec";
-            string passwort = "nicetec";
+            string server = "";
+            string port = "";
+            string database = "";
+            string user = "";
+            string passwort = "";
 
             string connectionString = $"Host={server};Port={port};Database={database};Username={user};Password={passwort}";
 
