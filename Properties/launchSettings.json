@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DatenbankReader": {
+      "commandName": "Project",
+      "commandLineArgs": "-all\r\n"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}

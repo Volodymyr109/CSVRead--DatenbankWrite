@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FWkrJqgyprKGBeuUnlsGitq3ojQgtbpcBeonOLhbuTc81fURk/rbChpgcRzhOuQ43pbkbDPqXrRSMr5seWKiyQ==",
+  "success": true,
+  "projectFilePath": "D:\\DatenbankReader\\DatenbankReader\\DatenbankReader.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vbohatyrchuk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\vbohatyrchuk\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
+    "C:\\Users\\vbohatyrchuk\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
