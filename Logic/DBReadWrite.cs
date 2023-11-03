@@ -15,7 +15,7 @@ namespace DatenbankReader.Logic
 
         public DBReadWrite()
         {
-            _connection = new NpgsqlConnection("Server=192.168.1.236;Port=5432;Database=ausbildung;User Id=nicetec;Password=nicetec;");
+            //_connection = new NpgsqlConnection("Server=localhost;Port=5432;Database=test;User Id=test;Password=test;");
         }
         public void WriteArtikelToDatabase(Artikel artikel)
         {
