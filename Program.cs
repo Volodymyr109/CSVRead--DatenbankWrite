@@ -11,24 +11,47 @@ class Program
     static void Main(string[] args)
     {
 
-        string connectionString = "YourDatabaseConnectionString";
-        using (var conn = new NpgsqlConnection(connectionString))
-        {
-            conn.Open();
+        string connString = "Server=192.168.1.236;Port=5432;Database=ausbildung;User Id=nicetec;Password=nicetec;";
 
+        if (args.Length != 1)
+        {
+            Console.WriteLine("Info - DatenbankReader");
+            Console.WriteLine("-artikel   Auslesen der Artikel");
+        }
+        else
+        {
             CSVReadWrite csv = new CSVReadWrite();
             DBReadWrite db = new DBReadWrite();
 
-            ProcessKunde(csv, db);
-            ProcessArtikel(csv, db);
-            ProcessRechnung(csv, db);
+            if (args[0] == "-kunde")
+            {
+                ProcessKunde(csv, db);
+            }
+            else if (args[0] == "-artikel")
+            {
+                ProcessArtikel(csv, db);
+            }
+            else if (args[0] == "-rechnung")
+            {
+                ProcessRechnung(csv, db);
+            }
+            else if (args[0] == "-all")
+            {
+                ProcessKunde(csv, db);
+                ProcessArtikel(csv, db);
+                ProcessRechnung(csv, db);
 
-            GesamtbetragProKunde(conn);
-
+                using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+                {
+                    conn.Open();
+                    GesamtbetragProKunde(conn);
+                    conn.Close();
+                }
+            }
         }
     }
 
-        public static void ProcessKunde(CSVReadWrite csv, DBReadWrite db)
+    public static void ProcessKunde(CSVReadWrite csv, DBReadWrite db)
     {
         List<Kunde> kunden = csv.KundeFromCSV();
 
